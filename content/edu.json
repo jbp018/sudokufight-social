@@ -1,0 +1,302 @@
+[
+ {
+  "id": "reglas",
+  "kind": "howto",
+  "title": "Las reglas, en 10 segundos",
+  "body": "Rellena la cuadrícula de 9×9 para que cada fila, cada columna y cada caja de 3×3 contenga los números del 1 al 9, sin repetir ninguno. Nunca hace falta adivinar: un sudoku bien hecho tiene una única solución."
+ },
+ {
+  "id": "empezar",
+  "kind": "howto",
+  "title": "Por dónde empezar",
+  "body": "Busca primero el número que más veces aparece ya en el tablero. En cada caja donde falte, descarta las filas y columnas donde ya está: muchas veces solo queda una celda posible."
+ },
+ {
+  "id": "anotaciones",
+  "kind": "howto",
+  "title": "Qué son las anotaciones",
+  "body": "Son los números que todavía caben en una celda, apuntados en pequeño. Cuando te atasques, rellénalas en todo el tablero: las técnicas avanzadas se ven en los candidatos, no en los huecos vacíos."
+ },
+ {
+  "id": "modos",
+  "kind": "howto",
+  "title": "Cuatro formas de jugar",
+  "body": "En Sudoku Fight puedes ir cara a cara contra un rival (gana quien termina primero), hacer el mejor tiempo, resolver el tablero en cooperativo con otra persona o jugar en solitario para batir tus marcas."
+ },
+ {
+  "id": "reto_diario",
+  "kind": "howto",
+  "title": "El reto del día",
+  "body": "Todo el mundo resuelve el mismo sudoku cada día, y cuenta el tiempo. Los puntos de cada reto se acumulan en la clasificación del mes y del año: no hace falta ganar un día para subir, basta con ser constante."
+ },
+ {
+  "id": "dificultad",
+  "kind": "howto",
+  "title": "Fácil, medio y difícil",
+  "body": "En Sudoku Fight el nivel cambia las pistas con las que empiezas: 36 en fácil, 28 en medio y 22 en difícil. Con menos pistas hay menos singles a la vista, y toca recurrir a pares y patrones."
+ },
+ {
+  "id": "single_desnudo",
+  "kind": "truco",
+  "title": "Single desnudo",
+  "body": "Si en una celda solo cabe un número (porque los demás ya están en su fila, columna o caja), ese es su número. Es la técnica base: casi cualquier sudoku fácil se resuelve solo con ella."
+ },
+ {
+  "id": "single_oculto",
+  "kind": "truco",
+  "title": "Single oculto",
+  "body": "Una celda puede admitir varios números, pero si en una fila, columna o caja un número solo cabe en UNA celda, ahí va, aunque esa celda tenga más candidatos. Es el truco que más tableros desatasca."
+ },
+ {
+  "id": "pares_desnudos",
+  "kind": "truco",
+  "title": "Pares desnudos",
+  "body": "Si dos celdas de una misma fila, columna o caja solo admiten los mismos dos números (por ejemplo 3 y 7), esos números son suyos: bórralos como candidatos del resto de esa fila, columna o caja."
+ },
+ {
+  "id": "pares_ocultos",
+  "kind": "truco",
+  "title": "Pares ocultos",
+  "body": "Si dos números solo caben en las mismas dos celdas de una fila, columna o caja, esas celdas son suyas: elimina de ellas cualquier otro candidato. Aunque tengan más opciones, no pueden usarlas."
+ },
+ {
+  "id": "apuntadores",
+  "kind": "truco",
+  "title": "Pares apuntadores",
+  "body": "Si dentro de una caja un número solo puede ir en una misma fila, ese número no puede estar en ninguna otra celda de esa fila fuera de la caja. Descártalo de ahí y el tablero se abre."
+ },
+ {
+  "id": "caja_linea",
+  "kind": "truco",
+  "title": "Reducción caja-línea",
+  "body": "Es el truco inverso al par apuntador: si en una fila un número solo cabe dentro de una misma caja, elimínalo del resto de celdas de esa caja. Sirve cuando parece que no queda nada que hacer."
+ },
+ {
+  "id": "xwing",
+  "kind": "truco",
+  "title": "X-Wing",
+  "body": "Si un número solo cabe en dos celdas de dos filas distintas, y esas celdas están en las mismas dos columnas, el número ocupará una diagonal u otra. Bórralo del resto de esas dos columnas."
+ },
+ {
+  "id": "trios",
+  "kind": "truco",
+  "title": "Tríos desnudos",
+  "body": "Tres celdas de una misma fila, columna o caja cuyos candidatos salen solo de entre tres números (aunque ninguna tenga los tres a la vez) se los reparten: quita esos números del resto de la unidad."
+ },
+ {
+  "id": "escaneo",
+  "kind": "truco",
+  "title": "Escaneo cruzado",
+  "body": "Elige un número, mira dónde está ya en las tres filas y las tres columnas de una banda y descarta. Si una caja se queda con una sola celda libre, ahí va. Repite con los nueve números."
+ },
+ {
+  "id": "contar",
+  "kind": "truco",
+  "title": "Mira lo que casi está completo",
+  "body": "Una fila con siete números solo tiene dos huecos y no necesita lógica avanzada. Revisa primero filas, columnas y cajas casi completas: son las victorias más rápidas del tablero."
+ },
+ {
+  "id": "velocidad",
+  "kind": "mejora",
+  "title": "Para ir más rápido",
+  "body": "No mires el tablero entero: trabaja un número cada vez (todos los 1, luego los 2...). Es más rápido que saltar de celda en celda, y además reduce los errores."
+ },
+ {
+  "id": "verificar",
+  "kind": "mejora",
+  "title": "Menos errores",
+  "body": "Antes de escribir un número, comprueba su fila, su columna y su caja. Dos segundos de verificación evitan el error que luego te obliga a deshacer media partida."
+ },
+ {
+  "id": "atasco",
+  "kind": "mejora",
+  "title": "Cuando te atascas",
+  "body": "Si llevas un minuto sin avanzar, cambia de zona. Un número nuevo en otra caja suele desbloquear justo la que te estaba bloqueando. Volver con la cabeza fresca ayuda más que mirar más rato."
+ },
+ {
+  "id": "una_tecnica",
+  "kind": "mejora",
+  "title": "Una técnica por semana",
+  "body": "Elige una técnica, por ejemplo los pares desnudos, y búscala a propósito en cada partida durante una semana. Pasarás de tener que buscarla a verla sola."
+ },
+ {
+  "id": "lapiz",
+  "kind": "mejora",
+  "title": "Cuándo usar el lápiz",
+  "body": "Anotar candidatos en todo el tablero cuesta tiempo, pero compensa en los difíciles. En los fáciles suele ir mejor no anotar nada y resolver con singles: ganarás segundos."
+ },
+ {
+  "id": "constancia",
+  "kind": "mejora",
+  "title": "La constancia gana",
+  "body": "Un sudoku al día entrena más que uno largo a la semana. En el reto del día, lo difícil no es resolverlo: es mantener la racha de días seguidos sin saltarte ninguno."
+ },
+ {
+  "id": "subir_nivel",
+  "kind": "mejora",
+  "title": "Cuándo subir de nivel",
+  "body": "Si resuelves los de nivel medio sin errores y sin apoyarte en las anotaciones, es la señal de que toca probar difícil. Subir antes de tiempo solo frustra; subir tarde aburre."
+ },
+ {
+  "id": "unidades",
+  "kind": "howto",
+  "title": "Filas, columnas y cajas",
+  "body": "Una fila es horizontal, una columna vertical y una caja es cada cuadrado de 3×3. Las tres son «unidades» y todas deben contener del 1 al 9. Casi todas las técnicas consisten en mirar una unidad cada vez."
+ },
+ {
+  "id": "unica_solucion",
+  "kind": "howto",
+  "title": "Por qué nunca hay que adivinar",
+  "body": "Un sudoku bien construido tiene una sola solución, así que siempre existe una deducción lógica posible. Si te ves adivinando, no te falta suerte: te falta una técnica."
+ },
+ {
+  "id": "cara_a_cara",
+  "kind": "howto",
+  "title": "Cara a cara: cómo ganar",
+  "body": "Los dos jugáis el mismo sudoku a la vez y gana quien lo termina primero. Empieza por los singles más evidentes y no te pares a comprobar cada número: la velocidad también decide."
+ },
+ {
+  "id": "mejor_tiempo",
+  "kind": "howto",
+  "title": "Modo mejor tiempo",
+  "body": "Juegas cuando quieras y gana el mejor tiempo. Sin rival al lado compites contra el reloj y contra tus propios registros: perfecto para mejorar una técnica sin presión."
+ },
+ {
+  "id": "cooperativo",
+  "kind": "howto",
+  "title": "Modo cooperativo",
+  "body": "Dos personas resuelven el mismo tablero juntas. Funciona muy bien repartirse el trabajo: una anota candidatos y la otra coloca números. Es la mejor forma de enseñar a alguien a jugar."
+ },
+ {
+  "id": "trio_oculto",
+  "kind": "truco",
+  "title": "Tríos ocultos",
+  "body": "Si tres números solo caben en las mismas tres celdas de una fila, columna o caja, esas celdas son suyas: elimina de ellas cualquier otro candidato. Es el hermano mayor de los pares ocultos."
+ },
+ {
+  "id": "cuarteto",
+  "kind": "truco",
+  "title": "Cuartetos desnudos",
+  "body": "Cuatro celdas de una misma unidad cuyos candidatos salen solo de entre cuatro números se los reparten entre ellas. Quita esos cuatro números del resto de la unidad."
+ },
+ {
+  "id": "swordfish",
+  "kind": "truco",
+  "title": "Swordfish",
+  "body": "Es un X-Wing con tres filas: si un número solo cabe en dos o tres posiciones de cada una de tres filas, y todas caen en las mismas tres columnas, bórralo del resto de esas columnas."
+ },
+ {
+  "id": "xy_wing",
+  "kind": "truco",
+  "title": "XY-Wing",
+  "body": "Una celda pivote con candidatos X e Y ve a otras dos: una con X y Z, otra con Y y Z. Sea cual sea el valor del pivote, Z acabará en una de las dos, así que cualquier celda que vea a ambas no puede ser Z."
+ },
+ {
+  "id": "colores",
+  "kind": "truco",
+  "title": "Cadenas de dos colores",
+  "body": "Marca con dos colores alternos las celdas donde un número solo cabe en dos sitios por unidad. Si dos celdas del mismo color se ven entre sí, ese color es falso: el número va en las del otro."
+ },
+ {
+  "id": "bivalue",
+  "kind": "truco",
+  "title": "Celdas de dos candidatos",
+  "body": "Las celdas con solo dos candidatos son oro: casi todas las técnicas avanzadas, como el XY-Wing o las cadenas, nacen de ellas. Cuando te atasques, busca esas celdas primero."
+ },
+ {
+  "id": "ultimo_numero",
+  "kind": "truco",
+  "title": "El noveno hueco",
+  "body": "Cuando un número ya aparece ocho veces en el tablero, el noveno sitio es único y evidente. Revisa cuáles están casi completos: son huecos que se resuelven gratis."
+ },
+ {
+  "id": "banda",
+  "kind": "truco",
+  "title": "Mira por bandas",
+  "body": "Una banda son tres cajas en fila. Si un número ya está en dos de ellas, en la tercera solo puede ir en la fila que queda libre. Si además hay una celda ocupada en esa fila, solo queda un sitio."
+ },
+ {
+  "id": "candidatos_orden",
+  "kind": "truco",
+  "title": "Anota por números, no por celdas",
+  "body": "Rellena los candidatos recorriendo todos los 1, luego todos los 2, y así. Hacerlo celda a celda es más lento y es muy fácil dejarse un candidato sin apuntar."
+ },
+ {
+  "id": "candidato_olvidado",
+  "kind": "truco",
+  "title": "Un candidato olvidado lo rompe todo",
+  "body": "Un solo candidato mal descartado puede llevarte a una contradicción treinta pasos después. Si el tablero se rompe, revisa primero las anotaciones, no los números ya puestos."
+ },
+ {
+  "id": "mas_usados",
+  "kind": "truco",
+  "title": "Empieza por los números más repetidos",
+  "body": "Los números que ya aparecen seis o siete veces se resuelven enseguida. Empieza por ellos y deja los más escasos para cuando el tablero ya te haya dado más información."
+ },
+ {
+  "id": "calentamiento",
+  "kind": "mejora",
+  "title": "Calienta con uno fácil",
+  "body": "Empezar la sesión con un sudoku fácil activa la vista de patrones. Antes de un reto del día o de un cara a cara, juega uno rápido: se nota en los primeros minutos."
+ },
+ {
+  "id": "descanso",
+  "kind": "mejora",
+  "title": "Descansa y vuelve",
+  "body": "Un tablero atascado diez minutos suele resolverse en segundos tras un descanso. Dejarlo un rato no es rendirse: la mirada fresca encuentra lo que la cansada no veía."
+ },
+ {
+  "id": "revisar_final",
+  "kind": "mejora",
+  "title": "Antes de terminar",
+  "body": "Cada fila, columna y caja suma 45, porque 1+2+...+9 = 45. En un tablero casi completo, comprobarlo es la forma más rápida de detectar un número mal puesto."
+ },
+ {
+  "id": "mirada",
+  "kind": "mejora",
+  "title": "Entrena la mirada",
+  "body": "Mira el tablero por bandas y no celda a celda. Con práctica verás de un vistazo dónde falta el número que buscas, y es lo que más separa a un jugador rápido de uno lento."
+ },
+ {
+  "id": "ritmo",
+  "kind": "mejora",
+  "title": "Ritmo antes que prisa",
+  "body": "Los jugadores rápidos no escriben más deprisa: dudan menos. Resuelve primero lo evidente y no vuelvas a comprobar lo que ya has deducido."
+ },
+ {
+  "id": "estadisticas",
+  "kind": "mejora",
+  "title": "Mide tu progreso",
+  "body": "Mira tu tiempo medio por nivel y no solo tu mejor marca: la media es lo que de verdad baja cuando mejoras. Una buena partida suelta puede ser casualidad."
+ },
+ {
+  "id": "error_comun",
+  "kind": "mejora",
+  "title": "El error más común",
+  "body": "Casi todos los errores vienen de colocar un número porque «encaja», sin comprobar que sea el único posible. Antes de escribir pregúntate: ¿por qué aquí y no en otra celda?"
+ },
+ {
+  "id": "orden_tecnicas",
+  "kind": "mejora",
+  "title": "El orden de las técnicas",
+  "body": "Prueba siempre en este orden: singles, pares, patrones. Pasa a la siguiente técnica solo cuando la anterior se agota; saltarte pasos es perder tiempo."
+ },
+ {
+  "id": "historia",
+  "kind": "curiosidad",
+  "title": "El sudoku no es japonés",
+  "body": "Lo inventó en 1979 el estadounidense Howard Garns y se publicó como «Number Place». Una editorial japonesa lo popularizó en 1984 con el nombre de sudoku, y de ahí volvió al mundo."
+ },
+ {
+  "id": "combinaciones",
+  "kind": "curiosidad",
+  "title": "6.670 trillones de tableros",
+  "body": "Existen 6.670.903.752.021.072.936.960 cuadrículas de sudoku completas y válidas. Aunque resolvieras una por segundo, no habría vida suficiente para agotarlas."
+ },
+ {
+  "id": "diecisiete",
+  "kind": "curiosidad",
+  "title": "Con 17 pistas basta",
+  "body": "Se demostró en 2012 que no existe ningún sudoku con solución única y menos de 17 pistas. Con 17 sí hay, pero son rarísimos y extremadamente difíciles."
+ }
+]

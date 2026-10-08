@@ -1,0 +1,537 @@
+[
+  {
+    "emoji": "🎚",
+    "title": "Tres escalones",
+    "desc": "Juega al menos una partida en cada nivel"
+  },
+  {
+    "emoji": "🟡",
+    "title": "Nivel medio",
+    "desc": "Juega 10 partidas en nivel Medio"
+  },
+  {
+    "emoji": "🟠",
+    "title": "Medio habitual",
+    "desc": "Juega 25 partidas en nivel Medio"
+  },
+  {
+    "emoji": "🧗",
+    "title": "Al ataque",
+    "desc": "Termina tu primera partida en Difícil"
+  },
+  {
+    "emoji": "🔺",
+    "title": "Cuesta arriba",
+    "desc": "Juega 10 partidas en Difícil"
+  },
+  {
+    "emoji": "⛰",
+    "title": "Escalador",
+    "desc": "Juega 25 partidas en Difícil"
+  },
+  {
+    "emoji": "🏔",
+    "title": "Cima",
+    "desc": "Juega 50 partidas en Difícil"
+  },
+  {
+    "emoji": "🌋",
+    "title": "Sin oxígeno",
+    "desc": "Juega 100 partidas en Difícil"
+  },
+  {
+    "emoji": "🪐",
+    "title": "El Difícil es tu casa",
+    "desc": "Juega 200 partidas en Difícil"
+  },
+  {
+    "emoji": "💪",
+    "title": "Duro de pelar",
+    "desc": "Gana una partida competitiva en Difícil"
+  },
+  {
+    "emoji": "🦾",
+    "title": "Especialista en Difícil",
+    "desc": "Gana 10 partidas competitivas en Difícil"
+  },
+  {
+    "emoji": "🎓",
+    "title": "Difícil con cabeza",
+    "desc": "Mantén un 80% de precisión en Difícil (5 partidas individuales)"
+  },
+  {
+    "emoji": "✨",
+    "title": "Impecable",
+    "desc": "Termina un puzzle individual sin ningún error"
+  },
+  {
+    "emoji": "🪞",
+    "title": "Pulso firme",
+    "desc": "Completa 5 puzzles individuales sin ningún error"
+  },
+  {
+    "emoji": "🔷",
+    "title": "Cirujano",
+    "desc": "Completa 25 puzzles individuales sin ningún error"
+  },
+  {
+    "emoji": "🧊",
+    "title": "Sangre fría",
+    "desc": "3 puzzles individuales seguidos sin un solo error"
+  },
+  {
+    "emoji": "🧿",
+    "title": "Sin un fallo",
+    "desc": "10 puzzles individuales seguidos sin un solo error"
+  },
+  {
+    "emoji": "💎",
+    "title": "Perfeccionista",
+    "desc": "Completa un puzzle Difícil individual sin errores"
+  },
+  {
+    "emoji": "🎯",
+    "title": "Precisión 85%",
+    "desc": "Mantén un 85% de precisión media con 10 partidas individuales"
+  },
+  {
+    "emoji": "🏹",
+    "title": "Precisión 92%",
+    "desc": "Mantén un 92% de precisión media con 20 partidas individuales"
+  },
+  {
+    "emoji": "🥇",
+    "title": "Precisión 97%",
+    "desc": "Mantén un 97% de precisión media con 30 partidas individuales"
+  },
+  {
+    "emoji": "📅",
+    "title": "Puntual",
+    "desc": "Completa tu primer reto del día"
+  },
+  {
+    "emoji": "🗓",
+    "title": "Rutina",
+    "desc": "Completa 10 retos del día"
+  },
+  {
+    "emoji": "📆",
+    "title": "Cita diaria",
+    "desc": "Completa 50 retos del día"
+  },
+  {
+    "emoji": "💯",
+    "title": "Cien días",
+    "desc": "Completa 100 retos del día"
+  },
+  {
+    "emoji": "🎆",
+    "title": "Un año de retos",
+    "desc": "Completa 365 retos del día"
+  },
+  {
+    "emoji": "🔥",
+    "title": "Semana perfecta",
+    "desc": "7 retos del día seguidos, sin saltarte ninguno"
+  },
+  {
+    "emoji": "🌙",
+    "title": "Mes perfecto",
+    "desc": "30 retos del día seguidos, sin saltarte ninguno"
+  },
+  {
+    "emoji": "☄️",
+    "title": "Cien días seguidos",
+    "desc": "100 retos del día seguidos, sin saltarte ninguno"
+  },
+  {
+    "emoji": "🏆",
+    "title": "Un año sin fallar un día",
+    "desc": "365 retos del día seguidos. El logro más difícil de la app"
+  },
+  {
+    "emoji": "🥉",
+    "title": "Al podio",
+    "desc": "Termina un reto del día entre los 3 primeros"
+  },
+  {
+    "emoji": "🥇",
+    "title": "El más rápido del día",
+    "desc": "Gana un reto del día"
+  },
+  {
+    "emoji": "🏅",
+    "title": "Habitual del podio",
+    "desc": "Sube al podio del reto del día 5 veces"
+  },
+  {
+    "emoji": "💠",
+    "title": "Mil puntos",
+    "desc": "Acumula 1.000 puntos en el reto del día"
+  },
+  {
+    "emoji": "🔹",
+    "title": "Cinco mil",
+    "desc": "Acumula 5.000 puntos en el reto del día"
+  },
+  {
+    "emoji": "🔶",
+    "title": "Veinticinco mil",
+    "desc": "Acumula 25.000 puntos en el reto del día"
+  },
+  {
+    "emoji": "👑",
+    "title": "Cien mil",
+    "desc": "Acumula 100.000 puntos en el reto del día"
+  },
+  {
+    "emoji": "🧩",
+    "title": "Primer puzzle solo",
+    "desc": "Completa tu primer puzzle individual"
+  },
+  {
+    "emoji": "⚔️",
+    "title": "Primer duelo",
+    "desc": "Juega tu primera partida multijugador"
+  },
+  {
+    "emoji": "🎮",
+    "title": "Jugador habitual",
+    "desc": "Juega 10 partidas"
+  },
+  {
+    "emoji": "💪",
+    "title": "Comprometido",
+    "desc": "Juega 25 partidas"
+  },
+  {
+    "emoji": "🎯",
+    "title": "Veterano",
+    "desc": "Juega 50 partidas"
+  },
+  {
+    "emoji": "🔥",
+    "title": "Centenario",
+    "desc": "Juega 100 partidas"
+  },
+  {
+    "emoji": "🏛",
+    "title": "Incombustible",
+    "desc": "Juega 250 partidas"
+  },
+  {
+    "emoji": "🗿",
+    "title": "Monumento",
+    "desc": "Juega 500 partidas"
+  },
+  {
+    "emoji": "🌌",
+    "title": "Mil batallas",
+    "desc": "Juega 1.000 partidas"
+  },
+  {
+    "emoji": "📝",
+    "title": "Autodidacta",
+    "desc": "Completa 5 puzzles individuales"
+  },
+  {
+    "emoji": "🧠",
+    "title": "Solitario",
+    "desc": "Completa 10 puzzles individuales"
+  },
+  {
+    "emoji": "💡",
+    "title": "Pensador",
+    "desc": "Completa 25 puzzles individuales"
+  },
+  {
+    "emoji": "📚",
+    "title": "Erudito",
+    "desc": "Completa 50 puzzles individuales"
+  },
+  {
+    "emoji": "🦉",
+    "title": "Sabio",
+    "desc": "Completa 100 puzzles individuales"
+  },
+  {
+    "emoji": "🧙",
+    "title": "Maestro del solitario",
+    "desc": "Completa 250 puzzles individuales"
+  },
+  {
+    "emoji": "🏆",
+    "title": "Primera victoria",
+    "desc": "Gana tu primera partida"
+  },
+  {
+    "emoji": "⭐",
+    "title": "Ganador",
+    "desc": "Consigue 5 victorias"
+  },
+  {
+    "emoji": "🌟",
+    "title": "Gran ganador",
+    "desc": "Consigue 20 victorias"
+  },
+  {
+    "emoji": "💫",
+    "title": "Implacable",
+    "desc": "Consigue 50 victorias"
+  },
+  {
+    "emoji": "👑",
+    "title": "Cien victorias",
+    "desc": "Consigue 100 victorias"
+  },
+  {
+    "emoji": "🦁",
+    "title": "Leyenda viva",
+    "desc": "Consigue 250 victorias"
+  },
+  {
+    "emoji": "📈",
+    "title": "Por encima de la media",
+    "desc": "Mantén un 60% de victorias con al menos 10 partidas"
+  },
+  {
+    "emoji": "📊",
+    "title": "Dominador",
+    "desc": "Mantén un 70% de victorias con al menos 10 partidas"
+  },
+  {
+    "emoji": "💯",
+    "title": "Élite",
+    "desc": "Mantén un 80% de victorias con al menos 20 partidas"
+  },
+  {
+    "emoji": "🔥",
+    "title": "En racha",
+    "desc": "Gana 3 partidas seguidas"
+  },
+  {
+    "emoji": "⚡",
+    "title": "Imparable",
+    "desc": "Gana 5 partidas seguidas"
+  },
+  {
+    "emoji": "🌪️",
+    "title": "Vendaval",
+    "desc": "Gana 7 partidas seguidas"
+  },
+  {
+    "emoji": "💥",
+    "title": "Invencible",
+    "desc": "Gana 10 partidas seguidas"
+  },
+  {
+    "emoji": "👑",
+    "title": "Legendario",
+    "desc": "Gana 15 partidas seguidas"
+  },
+  {
+    "emoji": "⏩",
+    "title": "Rapidísimo (Fácil)",
+    "desc": "Termina un puzzle fácil en menos de 3 minutos"
+  },
+  {
+    "emoji": "⚡",
+    "title": "Relámpago (Fácil)",
+    "desc": "Termina un puzzle fácil en menos de 2 minutos"
+  },
+  {
+    "emoji": "⚡️",
+    "title": "Speedrun",
+    "desc": "Termina un puzzle fácil en menos de 90 segundos"
+  },
+  {
+    "emoji": "🚀",
+    "title": "Rapidísimo (Medio)",
+    "desc": "Termina un puzzle medio en menos de 5 minutos"
+  },
+  {
+    "emoji": "🌠",
+    "title": "Relámpago (Medio)",
+    "desc": "Termina un puzzle medio en menos de 4 minutos"
+  },
+  {
+    "emoji": "🌟",
+    "title": "Rapidísimo (Difícil)",
+    "desc": "Termina un puzzle difícil en menos de 10 minutos"
+  },
+  {
+    "emoji": "🤯",
+    "title": "Relámpago (Difícil)",
+    "desc": "Termina un puzzle difícil en menos de 8 minutos"
+  },
+  {
+    "emoji": "⚡",
+    "title": "Cara a cara",
+    "desc": "Gana una partida Face to face"
+  },
+  {
+    "emoji": "🥊",
+    "title": "Peleador",
+    "desc": "Juega 5 partidas Face to face"
+  },
+  {
+    "emoji": "🥋",
+    "title": "Luchador",
+    "desc": "Juega 10 partidas Face to face"
+  },
+  {
+    "emoji": "⏱",
+    "title": "Mejor tiempo",
+    "desc": "Gana una partida Best time"
+  },
+  {
+    "emoji": "🕰️",
+    "title": "Cronometrado",
+    "desc": "Juega 5 partidas Best time"
+  },
+  {
+    "emoji": "🤝",
+    "title": "Cooperador",
+    "desc": "Termina una partida cooperativa"
+  },
+  {
+    "emoji": "👫",
+    "title": "Buena pareja",
+    "desc": "Termina 5 partidas cooperativas"
+  },
+  {
+    "emoji": "🌈",
+    "title": "Polifacético",
+    "desc": "Juega en los 4 modos: solo, Face to face, Best time y Cooperativo"
+  },
+  {
+    "emoji": "🤺",
+    "title": "Rivalidad",
+    "desc": "Juega 5 partidas contra el mismo rival"
+  },
+  {
+    "emoji": "👿",
+    "title": "Enemistad",
+    "desc": "Juega 10 partidas contra el mismo rival"
+  },
+  {
+    "emoji": "👁",
+    "title": "Dominador de rivales",
+    "desc": "Gana 5 veces al mismo rival"
+  },
+  {
+    "emoji": "🗓",
+    "title": "Una semana",
+    "desc": "Juega en 7 días distintos"
+  },
+  {
+    "emoji": "📈",
+    "title": "Un mes",
+    "desc": "Juega en 30 días distintos"
+  },
+  {
+    "emoji": "💎",
+    "title": "Cien días",
+    "desc": "Juega en 100 días distintos"
+  },
+  {
+    "emoji": "🔱",
+    "title": "Doscientos días",
+    "desc": "Juega en 200 días distintos"
+  },
+  {
+    "emoji": "🎇",
+    "title": "Trescientos sesenta y cinco",
+    "desc": "Juega en 365 días distintos"
+  },
+  {
+    "emoji": "🔗",
+    "title": "Siete de siete",
+    "desc": "Juega 7 días seguidos sin saltarte ninguno"
+  },
+  {
+    "emoji": "⛓",
+    "title": "Treinta de treinta",
+    "desc": "Juega 30 días seguidos sin saltarte ninguno"
+  },
+  {
+    "emoji": "🏅",
+    "title": "Cien días seguidos",
+    "desc": "Juega 100 días seguidos sin saltarte ninguno"
+  },
+  {
+    "emoji": "🖊️",
+    "title": "Sin ayudas",
+    "desc": "Completa un puzzle Difícil sin escribir una sola marca a lápiz"
+  },
+  {
+    "emoji": "✒️",
+    "title": "De cabeza",
+    "desc": "Completa 5 puzzles Difíciles sin una sola marca a lápiz"
+  },
+  {
+    "emoji": "🤯",
+    "title": "Sin fisuras",
+    "desc": "Termina un Difícil en competitivo sin una sola jugada mal"
+  },
+  {
+    "emoji": "🔺",
+    "title": "Tres difíciles clavados",
+    "desc": "3 puzzles Difíciles seguidos sin ningún error"
+  },
+  {
+    "emoji": "🎰",
+    "title": "Pleno al triple",
+    "desc": "Completa un Fácil, un Medio y un Difícil el mismo día"
+  },
+  {
+    "emoji": "🎡",
+    "title": "Rutina completa",
+    "desc": "Haz el triplete de niveles en 10 días distintos"
+  },
+  {
+    "emoji": "🏃",
+    "title": "Maratón",
+    "desc": "Juega 5 partidas en un mismo día"
+  },
+  {
+    "emoji": "🔋",
+    "title": "Sesión maratoniana",
+    "desc": "Juega 10 partidas en un mismo día"
+  },
+  {
+    "emoji": "🌐",
+    "title": "Sociable",
+    "desc": "Juega contra 5 rivales distintos"
+  },
+  {
+    "emoji": "🎪",
+    "title": "Cara conocida",
+    "desc": "Juega contra 15 rivales distintos"
+  },
+  {
+    "emoji": "⚔️",
+    "title": "Diez cabezas",
+    "desc": "Gana al menos una vez a 10 rivales distintos"
+  },
+  {
+    "emoji": "🗡",
+    "title": "Azote del lobby",
+    "desc": "Gana al menos una vez a 25 rivales distintos"
+  },
+  {
+    "emoji": "🦉",
+    "title": "Búho nocturno",
+    "desc": "Juega una partida entre las 0:00 y las 6:00"
+  },
+  {
+    "emoji": "📅",
+    "title": "Guerrero del fin de semana",
+    "desc": "Juega una partida en sábado o domingo"
+  },
+  {
+    "emoji": "🔄",
+    "title": "Remontada",
+    "desc": "Gana una partida de Best time a pesar de terminar después que el rival"
+  }
+]

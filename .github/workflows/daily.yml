@@ -1,0 +1,58 @@
+name: Publicar
+
+on:
+  schedule:
+    # UTC, cada 30 min de 05:05 a 18:35. Cubre de 07:00 a 20:30 en horario de
+    # verano y de 06:00 a 19:30 en invierno. Cada ejecución publica lo que ya
+    # toque según el plan del día (content_plan.py) y no hace nada si no hay nada.
+    - cron: "5,35 5-18 * * *"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "simulacro = solo dibuja el día entero · comprobar = sube una imagen y Instagram la valida, sin publicar · normal = publica lo que toque"
+        type: choice
+        options: [simulacro, comprobar, normal]
+        default: simulacro
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    # Windows: las tarjetas usan Segoe UI y Segoe UI Emoji, que solo vienen ahí.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Comprobar fuentes
+        run: python -c "import pathlib,sys; ok=[pathlib.Path(r'C:\Windows\Fonts',f).exists() for f in ('segoeui.ttf','segoeuib.ttf','seguisb.ttf','seguiemj.ttf')]; print(ok); sys.exit(0 if all(ok) else 1)"
+      - name: Identidad de git
+        shell: bash
+        run: |
+          git config user.name "sudokufight-bot"
+          git config user.email "bot@users.noreply.github.com"
+      - name: Publicar lo que toque ahora
+        shell: bash
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          case "${{ inputs.modo }}" in
+            simulacro) python run_daily.py --dry-run --at 23:59 ;;
+            comprobar) python publish.py --check ;;
+            *)         python run_daily.py ;;
+          esac
+      - name: Guardar estado
+        shell: bash
+        run: |
+          git add history.json public
+          git diff --cached --quiet || (git commit -m "estado $(date -u +%F)" && git pull --rebase --quiet && git push)
