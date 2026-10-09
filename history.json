@@ -46,5 +46,29 @@
     "ref": "subir_nivel",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-10-10",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-09"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-10-10",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "single_desnudo"
+    },
+    "ref": "single_desnudo",
+    "done": false,
+    "n": 1
   }
 ]
