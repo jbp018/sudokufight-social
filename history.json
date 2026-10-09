@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "date": "2026-10-09",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-08"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "cara_a_cara"
+    },
+    "ref": "cara_a_cara",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "combinaciones"
+    },
+    "ref": "combinaciones",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "subir_nivel"
+    },
+    "ref": "subir_nivel",
+    "done": false,
+    "n": 3
+  }
+]
