@@ -70,5 +70,39 @@
     "ref": "single_desnudo",
     "done": true,
     "n": 1
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-10"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "mas_usados"
+    },
+    "ref": "mas_usados",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "19:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 2
   }
 ]
