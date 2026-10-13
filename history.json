@@ -104,5 +104,53 @@
     "ref": null,
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-12"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "calentamiento"
+    },
+    "ref": "calentamiento",
+    "done": true,
+    "n": 1
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "unica_solucion"
+    },
+    "ref": "unica_solucion",
+    "done": true,
+    "n": 2
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "mejor_tiempo"
+    },
+    "ref": "mejor_tiempo",
+    "done": false,
+    "n": 3
   }
 ]
