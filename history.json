@@ -152,5 +152,29 @@
     "ref": "mejor_tiempo",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-13"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "descanso"
+    },
+    "ref": "descanso",
+    "done": false,
+    "n": 1
   }
 ]
