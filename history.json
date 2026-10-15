@@ -176,5 +176,49 @@
     "ref": "descanso",
     "done": true,
     "n": 1
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-14"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "post",
+    "type": "ranking_year",
+    "time": "12:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "story",
+    "type": "achievement",
+    "time": "14:00",
+    "args": {
+      "title": "Erudito"
+    },
+    "ref": "Erudito",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "19:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 3
   }
 ]
