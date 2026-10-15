@@ -196,7 +196,7 @@
     "time": "12:30",
     "args": {},
     "ref": null,
-    "done": false,
+    "done": true,
     "n": 1
   },
   {
@@ -208,7 +208,7 @@
       "title": "Erudito"
     },
     "ref": "Erudito",
-    "done": false,
+    "done": true,
     "n": 2
   },
   {
