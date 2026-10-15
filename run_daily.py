@@ -26,6 +26,7 @@ from content_plan import get_plan, mark_done
 from theme import MESES, fecha_es, fetch_rankings, hoy
 
 KEEP_DAYS = 7
+LAST_PUBLISH = "22:30"  # pasada esta hora ya no se publica nada: una story a medianoche no la ve nadie
 HASHTAGS = "#sudoku #sudokufight #pasatiempos #juegosdelogica #entrenamientomental"
 DOWNLOAD = "Sudoku Fight es gratis: enlace en la bio."
 
@@ -135,6 +136,14 @@ def main():
 
     plan = get_plan(today, dry_run=args.dry_run)
     due = [h for h in plan if not h["done"] and h["time"] <= now_hhmm]
+    if now_hhmm > LAST_PUBLISH and due:
+        print(f"Son las {now_hhmm}: demasiado tarde para publicar, se omiten {len(due)} piezas")
+        if not args.dry_run:
+            for h in due:
+                mark_done(today, h["n"], skipped=True)
+            from publish import save_state
+            save_state(f"estado {today} omitidas")
+        return
     print(f"{today} {now_hhmm}: {len(plan)} piezas en el plan, {len(due)} pendientes de publicar ahora")
 
     T.OUTPUT.mkdir(exist_ok=True)
@@ -153,12 +162,13 @@ def main():
             if args.dry_run:
                 print(f"- {label}: dibujada en {out.name} (dry-run)")
                 continue
-            from publish import publish_image
+            from publish import publish_image, save_state
 
             caption = caption_for(piece, data, today) if piece["slot"] == "post" else ""
             media_id = publish_image(out, story=piece["slot"] == "story", caption=caption,
                                      name=f"{today}_{piece['n']}_{piece['type']}")
             mark_done(today, piece["n"])
+            save_state(f"estado {today} {piece['type']}")
             print(f"- {label}: publicada ({media_id})")
             time.sleep(20)  # que las stories salgan en orden
         except Exception as e:  # una pieza que falla no bloquea las demás

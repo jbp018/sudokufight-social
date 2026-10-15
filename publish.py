@@ -63,11 +63,35 @@ def git(*args: str) -> None:
     subprocess.run(["git", *args], cwd=HOST_REPO, check=True)
 
 
+def git_push() -> None:
+    """GitHub falla a veces con errores internos pasajeros ("fatal error in
+    commit_refs"): se reintenta tras rebasar, en vez de tumbar toda la ejecución."""
+    for attempt in range(4):
+        if subprocess.run(["git", "push", "--quiet"], cwd=HOST_REPO).returncode == 0:
+            return
+        time.sleep(5 * (attempt + 1))
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "--quiet"], cwd=HOST_REPO)
+    raise RuntimeError("git push falló 4 veces seguidas")
+
+
+def save_state(message: str) -> None:
+    """Guarda en el repo qué piezas ya se publicaron (history.json) y las
+    imágenes. Se llama tras CADA pieza: si la ejecución muere a medias, el
+    estado ya está a salvo y la siguiente no repite ni se desorienta. Solo en
+    la nube; en local no hace nada."""
+    if not REPO:
+        return
+    git("add", "history.json", "public")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HOST_REPO).returncode != 0:
+        git("commit", "-m", message, "--quiet")
+        git_push()
+
+
 def host_publicly(jpg: Path) -> str:
     git("pull", "--rebase", "--autostash", "--quiet")
     git("add", str(jpg.relative_to(HOST_REPO)))
     git("commit", "-m", f"social: {jpg.name}", "--quiet")
-    git("push", "--quiet")
+    git_push()
     url = f"{PUBLIC_BASE}/{jpg.name}"
     for _ in range(40):  # GitHub Pages tarda hasta ~2 min en servirlo
         r = requests.head(url, timeout=10)

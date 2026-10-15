@@ -2,10 +2,12 @@ name: Publicar
 
 on:
   schedule:
-    # UTC, cada 30 min de 05:05 a 18:35. Cubre de 07:00 a 20:30 en horario de
-    # verano y de 06:00 a 19:30 en invierno. Cada ejecución publica lo que ya
-    # toque según el plan del día (content_plan.py) y no hace nada si no hay nada.
-    - cron: "5,35 5-18 * * *"
+    # UTC, cada 10 min de 05:03 a 20:53 (07:00 a 22:53 en horario de verano).
+    # GitHub descarta o retrasa muchas pasadas programadas (aterrizan ~10 %),
+    # así que se piden muchas para que alguna caiga cerca de la hora. Cada
+    # ejecución publica lo que ya toque según el plan del día y no hace nada
+    # si no hay nada.
+    - cron: "3,13,23,33,43,53 5-20 * * *"
   workflow_dispatch:
     inputs:
       modo:
@@ -52,6 +54,7 @@ jobs:
             *)         python run_daily.py ;;
           esac
       - name: Guardar estado
+        if: always()
         shell: bash
         run: |
           git add history.json public
