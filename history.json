@@ -220,5 +220,41 @@
     "ref": null,
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-10-16",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-15"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-16",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "estadisticas"
+    },
+    "ref": "estadisticas",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-16",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "xy_wing"
+    },
+    "ref": "xy_wing",
+    "done": false,
+    "n": 2
   }
 ]
