@@ -290,7 +290,7 @@
       "item": "escaneo"
     },
     "ref": "escaneo",
-    "done": false,
+    "done": true,
     "n": 2
   }
 ]
