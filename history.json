@@ -256,5 +256,41 @@
     "ref": "xy_wing",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-16"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "apuntadores"
+    },
+    "ref": "apuntadores",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "escaneo"
+    },
+    "ref": "escaneo",
+    "done": false,
+    "n": 2
   }
 ]
