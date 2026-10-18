@@ -292,5 +292,41 @@
     "ref": "escaneo",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-17"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "pares_ocultos"
+    },
+    "ref": "pares_ocultos",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "unidades"
+    },
+    "ref": "unidades",
+    "done": false,
+    "n": 2
   }
 ]
