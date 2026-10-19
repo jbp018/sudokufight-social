@@ -328,5 +328,39 @@
     "ref": "unidades",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-18"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "story",
+    "type": "ranking_month",
+    "time": "07:10",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "dificultad"
+    },
+    "ref": "dificultad",
+    "done": false,
+    "n": 2
   }
 ]
