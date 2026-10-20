@@ -363,5 +363,41 @@
     "done": true,
     "n": 2,
     "skipped": true
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-19"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "bivalue"
+    },
+    "ref": "bivalue",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "swordfish"
+    },
+    "ref": "swordfish",
+    "done": false,
+    "n": 2
   }
 ]
