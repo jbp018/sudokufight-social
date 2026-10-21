@@ -423,5 +423,39 @@
     "ref": "cooperativo",
     "done": true,
     "n": 1
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-21"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "14:00",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "revisar_final"
+    },
+    "ref": "revisar_final",
+    "done": false,
+    "n": 2
   }
 ]
