@@ -587,5 +587,53 @@
     "ref": "historia",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-26"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "una_tecnica"
+    },
+    "ref": "una_tecnica",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "trios"
+    },
+    "ref": "trios",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "banda"
+    },
+    "ref": "banda",
+    "done": false,
+    "n": 3
   }
 ]
