@@ -10,6 +10,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
+import diagrams
 import theme as T
 from theme import (
     EMOJI_FONT, GOLD, STEEL, WHITE, draw_cta, fit_font, font, format_stat, glow,
@@ -19,6 +20,7 @@ from theme import (
 DIR = Path(__file__).resolve().parent
 ACHIEVEMENTS = json.loads((DIR / "achievements.json").read_text(encoding="utf-8"))
 EDU = json.loads((DIR / "content" / "edu.json").read_text(encoding="utf-8"))
+NOVEDADES = json.loads((DIR / "content" / "novedades.json").read_text(encoding="utf-8"))
 
 EDU_LABEL = {
     "howto": ("📘", "CÓMO SE JUEGA"),
@@ -131,8 +133,48 @@ def render_achievement_card(out_path: Path, achievement: dict) -> None:
     img.save(out_path)
 
 
+def _render_edu_visual(out_path: Path, item: dict, spec: dict) -> None:
+    """Truco con diagrama: lo que se ve vale más que tres líneas de explicación."""
+    img = T.new_canvas()
+    draw = ImageDraw.Draw(img)
+    T.draw_header(img, draw, centered=True)
+
+    cf = font("segoeui.ttf", 32)
+    lines = wrap_text(draw, spec["caption"], cf, T.W - 180)
+    fixed = 160 + 30 + 40 + 20 + len(lines) * 44
+    avail = T.cta_top() - T.header_bottom() - 90
+    cell = 104 if spec["kind"] == "rows" else max(48, min(88, (avail - fixed) // 9))
+    diagram_h = diagrams.height(spec, cell)
+    y0 = int(T.center_block(fixed + diagram_h))
+
+    emoji, label = EDU_LABEL[item["kind"]]
+    ef, lf = font(EMOJI_FONT, 36), font("seguisb.ttf", 36)
+    emoji_w = draw.textlength(emoji + " ", font=ef)
+    start = (T.W - emoji_w - draw.textlength(label, font=lf)) / 2
+    draw.text((start, y0), emoji + " ", font=ef, embedded_color=True)
+    draw.text((start + emoji_w, y0), label, font=lf, fill=GOLD)
+    _centered(draw, item["title"], fit_font(draw, item["title"], "segoeuib.ttf", 64, T.W - 140), y0 + 74, WHITE)
+
+    diagram_y = y0 + 160
+    diagrams.draw(draw, spec, diagram_y, cell)
+    legend_y = diagram_y + diagram_h + 30
+    diagrams.draw_legend(draw, spec["legend"], legend_y)
+    cap_y = legend_y + 70
+    for line in lines:
+        _centered(draw, line, cf, cap_y, STEEL)
+        cap_y += 44
+
+    draw_cta(draw, "Pon a prueba tu técnica · descárgala gratis")
+    T.OUTPUT.mkdir(exist_ok=True)
+    img.save(out_path)
+
+
 def render_edu_card(out_path: Path, item: dict) -> None:
-    """Explicación de cómo se juega, truco o consejo para mejorar."""
+    """Explicación de cómo se juega, truco o consejo para mejorar. Si hay un
+    diagrama para ese truco (diagrams.py) se usa; si no, solo texto."""
+    spec = diagrams.get(item["id"])
+    if spec:
+        return _render_edu_visual(out_path, item, spec)
     img = T.new_canvas()
     draw = ImageDraw.Draw(img)
     T.draw_header(img, draw, centered=True)
@@ -158,6 +200,53 @@ def render_edu_card(out_path: Path, item: dict) -> None:
         body_y += 54
 
     draw_cta(draw, "Pon a prueba tu técnica · descárgala gratis")
+    T.OUTPUT.mkdir(exist_ok=True)
+    img.save(out_path)
+
+
+def render_novedad_card(out_path: Path, item: dict) -> None:
+    """Novedad de la app: el título y el texto son los mismos que ve el usuario
+    dentro de la app (content/novedades.json, copiado con sync_novedades.py)."""
+    img = T.new_canvas()
+    draw = ImageDraw.Draw(img)
+    T.draw_header(img, draw, centered=True)
+
+    avail = T.cta_top() - T.header_bottom() - 70
+    paragraphs = [p.strip() for p in item["body"].split("\n\n") if p.strip()]
+    for size in (36, 34, 32, 30, 28, 26):
+        bf = font("segoeui.ttf", size)
+        lines = []
+        for i, para in enumerate(paragraphs):
+            lines += wrap_text(draw, para, bf, T.W - 170)
+            if i < len(paragraphs) - 1:
+                lines.append("")  # línea en blanco entre párrafos
+        lh = int(size * 1.4)
+        badge_r = 70
+        block_h = 50 + 20 + 2 * badge_r + 40 + 80 + 40 + len(lines) * lh
+        if block_h <= avail:
+            break
+    y0 = int(T.center_block(block_h))
+
+    label = "NOVEDAD"
+    lf = font("seguisb.ttf", 34)
+    _centered(draw, label, lf, y0, GOLD)
+
+    cx, cy = T.W // 2, y0 + 50 + 20 + badge_r
+    draw.ellipse([cx - badge_r, cy - badge_r, cx + badge_r, cy + badge_r], outline=GOLD, width=5)
+    ef = font(EMOJI_FONT, 76)
+    ew = draw.textlength(item["emoji"], font=ef)
+    draw.text((cx - ew / 2, text_centered_y(draw, item["emoji"], ef, cy)), item["emoji"], font=ef, embedded_color=True)
+
+    title_y = cy + badge_r + 40
+    _centered(draw, item["title"], fit_font(draw, item["title"], "segoeuib.ttf", 60, T.W - 120), title_y, WHITE)
+
+    y = title_y + 100
+    for line in lines:
+        if line:
+            _centered(draw, line, bf, y, STEEL)
+        y += lh
+
+    draw_cta(draw, "Actualiza la app · descárgala gratis")
     T.OUTPUT.mkdir(exist_ok=True)
     img.save(out_path)
 

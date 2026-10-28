@@ -13,9 +13,11 @@ Reglas (todas las horas son de España):
            duelo por un puesto y, rara vez, un logro (solo se ven en Premium)
 
   Posts de feed
-    mar y vie 13:00        educativo
+    mar y vie 13:00        educativo, con diagrama
     día 1, 12:30 y 18:00   campeón del mes + clasificación del mes cerrado
     día 15, 12:30          clasificación del año
+    12:00                  novedad de la app (una por día sin otro post, solo si
+                           su versión ya está en la App Store)
     1 enero 12:30 y 18:00  campeón del año + clasificación del año cerrado
                            (los del mes se pasan al día 2)
 
@@ -34,7 +36,9 @@ import random
 from datetime import date, timedelta
 from pathlib import Path
 
+import diagrams
 import extra_cards
+import requests
 from theme import hoy
 
 DIR = Path(__file__).resolve().parent
@@ -66,6 +70,24 @@ def _pick_least_recent(history: list, today: date, ctype: str, refs: list, taken
     pool = [r for r in refs if r not in taken] or refs
     scored = [(_days_since(history, today, ctype, r), random.random(), r) for r in pool]
     return max(scored)[2]
+
+
+BUNDLE_ID = "com.jbp018.sudokufight"
+
+
+def store_version() -> str | None:
+    """Versión publicada ahora en la App Store de España (None si no se pudo
+    comprobar: ante la duda, no se anuncia nada)."""
+    try:
+        r = requests.get("https://itunes.apple.com/lookup", params={"bundleId": BUNDLE_ID, "country": "es"}, timeout=15)
+        results = r.json()["results"]
+        return results[0]["version"] if results else None
+    except Exception:
+        return None
+
+
+def _vt(version: str) -> tuple:
+    return tuple(int(x) for x in version.split("."))
 
 
 def _month_key(d: date) -> str:
@@ -108,10 +130,22 @@ def build_day(today: date, history: list) -> list:
 
     taken_edu = set()
     edu_ids = [i["id"] for i in extra_cards.EDU]
-    if today.weekday() in (1, 4):  # martes y viernes
-        ref = _pick_least_recent(history, today, "edu", edu_ids, taken_edu)
+    if today.weekday() in (1, 4):  # martes y viernes: los posts, mejor con diagrama
+        ref = _pick_least_recent(history, today, "edu", list(diagrams.CATALOG), taken_edu)
         taken_edu.add(ref)
         add("post", "edu", "13:00", {"item": ref}, ref)
+
+    # Novedades de la app: un post por novedad, los días que no hay otro post, y
+    # solo cuando su versión ya está en la App Store (no anunciar lo que el
+    # usuario aún no puede tener).
+    if not any(p["slot"] == "post" for p in pieces):
+        live = store_version()
+        if live:
+            announced = {h.get("ref") for h in history if h["type"] == "novedad"}
+            pending = [n for n in extra_cards.NOVEDADES
+                       if n["id"] not in announced and _vt(n["desde"]) <= _vt(live)]
+            if pending:
+                add("post", "novedad", "12:00", {"id": pending[0]["id"]}, pending[0]["id"])
 
     n_stories = random.choices([1, 2], weights=[35, 65])[0]
     slots = STORY_SLOTS if n_stories == 2 else [random.choice(STORY_SLOTS)]

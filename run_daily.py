@@ -74,6 +74,9 @@ def render_piece(piece: dict, data: dict | None, out: Path, today: date) -> bool
     elif ctype == "edu":
         item = next(x for x in extra_cards.EDU if x["id"] == a["item"])
         extra_cards.render_edu_card(out, item)
+    elif ctype == "novedad":
+        item = next(x for x in extra_cards.NOVEDADES if x["id"] == a["id"])
+        extra_cards.render_novedad_card(out, item)
     else:
         print(f"  tipo desconocido: {ctype}")
         return False
@@ -86,6 +89,11 @@ def caption_for(piece: dict, data: dict | None, today: date) -> str:
     if ctype == "edu":
         item = next(x for x in extra_cards.EDU if x["id"] == a["item"])
         return f"{item['title']}\n\n{item['body']}\n\nGuárdalo para tu próxima partida 📌\n\n{DOWNLOAD}\n\n{HASHTAGS}"
+
+    if ctype == "novedad":
+        item = next(x for x in extra_cards.NOVEDADES if x["id"] == a["id"])
+        return (f"🆕 {item['title']}\n\n{item['body']}\n\nActualiza Sudoku Fight a la última versión. "
+                f"{DOWNLOAD}\n\n{HASHTAGS}")
 
     if ctype in ("champion_month", "champion_year"):
         kind = "month" if ctype == "champion_month" else "year"
@@ -152,7 +160,7 @@ def main():
     for piece in due:
         label = f"{piece['time']} {piece['slot']} {piece['type']} {piece.get('ref') or ''}".strip()
         try:
-            data = fetch_for(piece, args.base_url, args.key, args.sample) if piece["type"] not in ("edu", "achievement") else None
+            data = fetch_for(piece, args.base_url, args.key, args.sample) if piece["type"] not in ("edu", "achievement", "novedad") else None
             out = T.OUTPUT / f"{today}_{piece['n']}_{piece['type']}.png"
             if not render_piece(piece, data, out, today):
                 print(f"- {label}: sin datos que mostrar, se omite")

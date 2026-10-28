@@ -1,0 +1,30 @@
+[
+ {
+  "id": "rivals",
+  "emoji": "🤺",
+  "desde": "1.2.4",
+  "title": "Cara a cara con cada rival",
+  "body": "En Estadísticas → Rivales, toca a un rival para ver vuestro historial: victorias de cada uno, rachas, mejores tiempos y vuestras partidas más igualadas. Desde ahí puedes retarle o guardarlo en favoritos (con Premium).\n\nY al acabar una partida, la estrella del resultado lo añade a favoritos para retarle con un toque."
+ },
+ {
+  "id": "records",
+  "emoji": "🏆",
+  "desde": "1.2.4",
+  "title": "Tus récords personales",
+  "body": "Cuando bates tu mejor tiempo en un nivel te sale una tarjeta dorada con la marca y cuánto has mejorado. También celebra tu mejor marca en cada modo.\n\nEn Estadísticas → Resumen tienes «Tus récords»: tu mejor tiempo en cada nivel, en qué modo, contra quién y cuándo."
+ },
+ {
+  "id": "shareDaily",
+  "emoji": "📸",
+  "desde": "1.2.5",
+  "title": "Presume de tu reto del día",
+  "body": "Al completar el reto del día y ver la clasificación te sale una tarjeta con tu tiempo, tu puesto y tu racha, lista para compartir en Instagram o WhatsApp.\n\nLleva tu código de invitación: quien se registre con él cuenta como amigo tuyo y te acerca a más días de Premium. Si la cierras, la tienes en el botón «Compartir» de tu fila en la clasificación."
+ },
+ {
+  "id": "logroOculto",
+  "emoji": "🔒",
+  "desde": "1.2.5",
+  "title": "Descubre un logro oculto",
+  "body": "Sin Premium, los logros que te faltan salen tapados. Ahora puedes tocar uno y, viendo un anuncio, descubrir qué es mientras sigas en esa pantalla.\n\nEstá en Estadísticas → Logros: toca cualquier logro con 🔒. Con Premium los ves todos, siempre y sin anuncios."
+ }
+]
