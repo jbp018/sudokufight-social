@@ -635,5 +635,39 @@
     "ref": "banda",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-27"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "14:00",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "story",
+    "type": "achievement",
+    "time": "19:30",
+    "args": {
+      "title": "Sociable"
+    },
+    "ref": "Sociable",
+    "done": false,
+    "n": 2
   }
 ]
