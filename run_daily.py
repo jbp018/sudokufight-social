@@ -155,7 +155,8 @@ def main():
     print(f"{today} {now_hhmm}: {len(plan)} piezas en el plan, {len(due)} pendientes de publicar ahora")
 
     T.OUTPUT.mkdir(exist_ok=True)
-    cleanup_old_images(today)
+    if not args.dry_run:
+        cleanup_old_images(today)
     failures = 0
     for piece in due:
         label = f"{piece['time']} {piece['slot']} {piece['type']} {piece.get('ref') or ''}".strip()
