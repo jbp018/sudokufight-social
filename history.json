@@ -667,7 +667,8 @@
       "title": "Sociable"
     },
     "ref": "Sociable",
-    "done": false,
-    "n": 2
+    "done": true,
+    "n": 2,
+    "skipped": true
   }
 ]
