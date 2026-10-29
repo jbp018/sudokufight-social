@@ -716,7 +716,8 @@
       "item": "ultimo_numero"
     },
     "ref": "ultimo_numero",
-    "done": false,
-    "n": 3
+    "done": true,
+    "n": 3,
+    "skipped": true
   }
 ]
