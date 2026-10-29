@@ -670,5 +670,53 @@
     "done": true,
     "n": 2,
     "skipped": true
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-28"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "post",
+    "type": "novedad",
+    "time": "12:00",
+    "args": {
+      "id": "rivals"
+    },
+    "ref": "rivals",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "velocidad"
+    },
+    "ref": "velocidad",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "ultimo_numero"
+    },
+    "ref": "ultimo_numero",
+    "done": false,
+    "n": 3
   }
 ]
