@@ -719,5 +719,53 @@
     "done": true,
     "n": 3,
     "skipped": true
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-29"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "pares_desnudos"
+    },
+    "ref": "pares_desnudos",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "cuarteto"
+    },
+    "ref": "cuarteto",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "trio_oculto"
+    },
+    "ref": "trio_oculto",
+    "done": false,
+    "n": 3
   }
 ]
