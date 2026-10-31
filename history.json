@@ -767,5 +767,41 @@
     "ref": "trio_oculto",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-30"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "post",
+    "type": "novedad",
+    "time": "12:00",
+    "args": {
+      "id": "records"
+    },
+    "ref": "records",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "single_oculto"
+    },
+    "ref": "single_oculto",
+    "done": false,
+    "n": 2
   }
 ]
