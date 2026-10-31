@@ -803,5 +803,79 @@
     "ref": "single_oculto",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-10-31"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "story",
+    "type": "ranking_month",
+    "time": "07:10",
+    "args": {
+      "month": "2026-10",
+      "final": true
+    },
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "story",
+    "type": "champion_month",
+    "time": "09:00",
+    "args": {
+      "month": "2026-10"
+    },
+    "ref": null,
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "post",
+    "type": "champion_month",
+    "time": "12:30",
+    "args": {
+      "month": "2026-10"
+    },
+    "ref": null,
+    "done": false,
+    "n": 3
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "candidatos_orden"
+    },
+    "ref": "candidatos_orden",
+    "done": false,
+    "n": 4
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "post",
+    "type": "ranking_month",
+    "time": "18:00",
+    "args": {
+      "month": "2026-10",
+      "final": true
+    },
+    "ref": null,
+    "done": false,
+    "n": 5
   }
 ]
