@@ -877,5 +877,61 @@
     "ref": null,
     "done": true,
     "n": 5
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-01"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "story",
+    "type": "ranking_month",
+    "time": "07:10",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "post",
+    "type": "novedad",
+    "time": "12:00",
+    "args": {
+      "id": "shareDaily"
+    },
+    "ref": "shareDaily",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "colores"
+    },
+    "ref": "colores",
+    "done": false,
+    "n": 3
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "19:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 4
   }
 ]
