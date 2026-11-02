@@ -931,7 +931,8 @@
     "time": "19:30",
     "args": {},
     "ref": null,
-    "done": false,
-    "n": 4
+    "done": true,
+    "n": 4,
+    "skipped": true
   }
 ]
