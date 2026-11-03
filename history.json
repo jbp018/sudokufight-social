@@ -980,7 +980,7 @@
       "item": "reto_diario"
     },
     "ref": "reto_diario",
-    "done": false,
+    "done": true,
     "n": 3
   }
 ]
