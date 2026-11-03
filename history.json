@@ -934,5 +934,53 @@
     "done": true,
     "n": 4,
     "skipped": true
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-02"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "post",
+    "type": "edu",
+    "time": "13:00",
+    "args": {
+      "item": "caja_linea"
+    },
+    "ref": "caja_linea",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "contar"
+    },
+    "ref": "contar",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "reto_diario"
+    },
+    "ref": "reto_diario",
+    "done": false,
+    "n": 3
   }
 ]
