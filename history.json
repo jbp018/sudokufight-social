@@ -982,5 +982,53 @@
     "ref": "reto_diario",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-03"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "post",
+    "type": "novedad",
+    "time": "12:00",
+    "args": {
+      "id": "logroOculto"
+    },
+    "ref": "logroOculto",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "story",
+    "type": "achievement",
+    "time": "14:00",
+    "args": {
+      "title": "Mejor tiempo"
+    },
+    "ref": "Mejor tiempo",
+    "done": false,
+    "n": 2
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "empezar"
+    },
+    "ref": "empezar",
+    "done": false,
+    "n": 3
   }
 ]
