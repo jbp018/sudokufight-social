@@ -1030,5 +1030,29 @@
     "ref": "empezar",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-11-05",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-04"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-05",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "atasco"
+    },
+    "ref": "atasco",
+    "done": false,
+    "n": 1
   }
 ]
