@@ -1124,7 +1124,7 @@
       "item": "candidato_olvidado"
     },
     "ref": "candidato_olvidado",
-    "done": false,
+    "done": true,
     "n": 1
   }
 ]
