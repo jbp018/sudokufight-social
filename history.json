@@ -1240,7 +1240,7 @@
       "item": "orden_tecnicas"
     },
     "ref": "orden_tecnicas",
-    "done": false,
+    "done": true,
     "n": 3
   }
 ]
