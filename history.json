@@ -1242,5 +1242,41 @@
     "ref": "orden_tecnicas",
     "done": true,
     "n": 3
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-10"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "combinaciones"
+    },
+    "ref": "combinaciones",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "subir_nivel"
+    },
+    "ref": "subir_nivel",
+    "done": false,
+    "n": 2
   }
 ]
