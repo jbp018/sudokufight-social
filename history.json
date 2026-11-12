@@ -1278,5 +1278,41 @@
     "ref": "subir_nivel",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-11"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "cara_a_cara"
+    },
+    "ref": "cara_a_cara",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "mas_usados"
+    },
+    "ref": "mas_usados",
+    "done": false,
+    "n": 2
   }
 ]
