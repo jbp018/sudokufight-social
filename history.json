@@ -1350,5 +1350,39 @@
     "ref": "unica_solucion",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-13"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "mejor_tiempo"
+    },
+    "ref": "mejor_tiempo",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "19:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 2
   }
 ]
