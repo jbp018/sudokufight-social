@@ -1463,7 +1463,8 @@
       "item": "estadisticas"
     },
     "ref": "estadisticas",
-    "done": false,
-    "n": 3
+    "done": true,
+    "n": 3,
+    "skipped": true
   }
 ]
