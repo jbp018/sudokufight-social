@@ -1451,7 +1451,7 @@
       "item": "descanso"
     },
     "ref": "descanso",
-    "done": false,
+    "done": true,
     "n": 2
   },
   {
