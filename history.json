@@ -1512,7 +1512,8 @@
       "item": "escaneo"
     },
     "ref": "escaneo",
-    "done": false,
-    "n": 3
+    "done": true,
+    "n": 3,
+    "skipped": true
   }
 ]
