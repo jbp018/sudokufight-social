@@ -1540,5 +1540,39 @@
     "done": true,
     "n": 1,
     "skipped": true
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-18"
+    },
+    "ref": null,
+    "done": true,
+    "n": 0
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "dificultad"
+    },
+    "ref": "dificultad",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "19:30",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 2
   }
 ]
