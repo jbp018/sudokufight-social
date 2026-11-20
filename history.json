@@ -1621,7 +1621,8 @@
       "item": "bivalue"
     },
     "ref": "bivalue",
-    "done": false,
-    "n": 3
+    "done": true,
+    "n": 3,
+    "skipped": true
   }
 ]
