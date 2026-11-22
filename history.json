@@ -1660,5 +1660,41 @@
     "ref": "revisar_final",
     "done": true,
     "n": 2
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-21"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "error_comun"
+    },
+    "ref": "error_comun",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "constancia"
+    },
+    "ref": "constancia",
+    "done": false,
+    "n": 2
   }
 ]
