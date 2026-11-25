@@ -1766,5 +1766,41 @@
     "ref": "diecisiete",
     "done": false,
     "n": 2
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-24"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "story",
+    "type": "edu",
+    "time": "14:00",
+    "args": {
+      "item": "verificar"
+    },
+    "ref": "verificar",
+    "done": false,
+    "n": 1
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "story",
+    "type": "edu",
+    "time": "19:30",
+    "args": {
+      "item": "historia"
+    },
+    "ref": "historia",
+    "done": false,
+    "n": 2
   }
 ]
