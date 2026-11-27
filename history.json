@@ -1886,5 +1886,27 @@
     "ref": "Gran ganador",
     "done": false,
     "n": 3
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "story",
+    "type": "champion_day",
+    "time": "07:00",
+    "args": {
+      "day": "2026-11-27"
+    },
+    "ref": null,
+    "done": false,
+    "n": 0
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "story",
+    "type": "duel_month",
+    "time": "14:00",
+    "args": {},
+    "ref": null,
+    "done": false,
+    "n": 1
   }
 ]
