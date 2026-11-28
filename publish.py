@@ -81,11 +81,16 @@ def save_state(message: str) -> None:
         git_push()
 
 
-def host_publicly(jpg: Path) -> str:
+def host_publicly(jpg: Path, allow_existing: bool = False) -> str:
+    """allow_existing: la imagen ya puede estar subida tal cual (el modo --check
+    siempre genera la misma). En una publicación real NO: si la imagen ya está
+    en el repo es que esa pieza ya se intentó, y fallar es lo que evita repetirla."""
     git("pull", "--rebase", "--autostash", "--quiet")
     git("add", str(jpg.relative_to(HOST_REPO)))
-    git("commit", "-m", f"social: {jpg.name}", "--quiet")
-    git_push()
+    unchanged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HOST_REPO).returncode == 0
+    if not (unchanged and allow_existing):
+        git("commit", "-m", f"social: {jpg.name}", "--quiet")
+        git_push()
     url = f"{PUBLIC_BASE}/{jpg.name}"
     for _ in range(40):  # GitHub Pages tarda hasta ~2 min en servirlo
         r = requests.head(url, timeout=10)
@@ -145,7 +150,7 @@ def main():
         png = DIR / "output" / "check.png"
         png.parent.mkdir(exist_ok=True)
         Image.new("RGB", (1080, 1920), "#0E1A2B").save(png)
-        url = host_publicly(to_jpeg(png, "check"))
+        url = host_publicly(to_jpeg(png, "check"), allow_existing=True)
         create_container(get_token(), url, story=True)
         print("OK: Instagram descargó y validó", url, "(no se publicó nada)")
         return
