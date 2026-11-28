@@ -11,6 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 import diagrams
+import mockups
 import theme as T
 from theme import (
     EMOJI_FONT, GOLD, STEEL, WHITE, draw_cta, fit_font, font, format_stat, glow,
@@ -21,6 +22,7 @@ DIR = Path(__file__).resolve().parent
 ACHIEVEMENTS = json.loads((DIR / "achievements.json").read_text(encoding="utf-8"))
 EDU = json.loads((DIR / "content" / "edu.json").read_text(encoding="utf-8"))
 NOVEDADES = json.loads((DIR / "content" / "novedades.json").read_text(encoding="utf-8"))
+NOVEDAD_SHOTS = json.loads((DIR / "content" / "novedad_shots.json").read_text(encoding="utf-8"))
 
 EDU_LABEL = {
     "howto": ("📘", "CÓMO SE JUEGA"),
@@ -205,6 +207,52 @@ def render_edu_card(out_path: Path, item: dict) -> None:
 
 
 def render_novedad_card(out_path: Path, item: dict) -> None:
+    """Novedad de la app. Con capturas (content/novedad_shots.json): título, la
+    app dentro de un móvil y dónde encontrarla. Sin capturas: solo texto."""
+    cfg = NOVEDAD_SHOTS.get(item["id"])
+    if not cfg:
+        return _render_novedad_text(out_path, item)
+
+    img = T.new_canvas()
+    halo = glow(T.W // 2, (T.header_bottom() + T.cta_top()) // 2, 620, (24, 95, 165), max_alpha=70)
+    img.paste(halo, (0, 0), halo)
+    draw = ImageDraw.Draw(img)
+    T.draw_header(img, draw, centered=True)
+
+    top = T.header_bottom() + 36
+    ef, lf = font(EMOJI_FONT, 34), font("seguisb.ttf", 34)
+    label = "NOVEDAD"
+    emoji_w = draw.textlength(item["emoji"] + " ", font=ef)
+    start = (T.W - emoji_w - draw.textlength(label, font=lf)) / 2
+    cy = top + 24
+    draw.text((start, text_centered_y(draw, item["emoji"], ef, cy)), item["emoji"] + " ", font=ef, embedded_color=True)
+    draw.text((start + emoji_w, text_centered_y(draw, label, lf, cy)), label, font=lf, fill=GOLD)
+    _centered(draw, item["title"], fit_font(draw, item["title"], "segoeuib.ttf", 60, T.W - 120), top + 62, WHITE)
+
+    pf, pef = font("segoeui.ttf", 30), font(EMOJI_FONT, 30)
+    donde_y = T.cta_top() - 76
+    pin_w = draw.textlength("📍 ", font=pef)
+    text = cfg["donde"]
+    total = pin_w + draw.textlength(text, font=pf)
+    if total > T.W - 120:  # texto largo: se achica para que no se salga
+        pf = fit_font(draw, text, "segoeui.ttf", 30, T.W - 120 - pin_w)
+        total = pin_w + draw.textlength(text, font=pf)
+    sx = (T.W - total) / 2
+    dcy = donde_y + 20
+    draw.text((sx, text_centered_y(draw, "📍", pef, dcy)), "📍 ", font=pef, embedded_color=True)
+    draw.text((sx + pin_w, text_centered_y(draw, text, pf, dcy)), text, font=pf, fill=STEEL)
+
+    area_top = top + 62 + 115
+    area_bottom = donde_y - 24
+    mock = mockups.compose([tuple(s) for s in cfg["shots"]], T.W - 80, area_bottom - area_top)
+    img.paste(mock, ((T.W - mock.width) // 2, area_top + (area_bottom - area_top - mock.height) // 2), mock)
+
+    draw_cta(draw, "Actualiza la app · descárgala gratis")
+    T.OUTPUT.mkdir(exist_ok=True)
+    img.save(out_path)
+
+
+def _render_novedad_text(out_path: Path, item: dict) -> None:
     """Novedad de la app: el título y el texto son los mismos que ve el usuario
     dentro de la app (content/novedades.json, copiado con sync_novedades.py)."""
     img = T.new_canvas()
