@@ -137,15 +137,24 @@ def build_day(today: date, history: list) -> list:
 
     # Novedades de la app: un post por novedad, los días que no hay otro post, y
     # solo cuando su versión ya está en la App Store (no anunciar lo que el
-    # usuario aún no puede tener).
+    # usuario aún no puede tener). Las que salieron antes como tarjeta de texto
+    # y ahora tienen capturas (`republicar` en novedad_shots.json) se anuncian
+    # una vez más con el diseño de móvil; esa segunda vez queda como "<id>:visual".
     if not any(p["slot"] == "post" for p in pieces):
         live = store_version()
         if live:
             announced = {h.get("ref") for h in history if h["type"] == "novedad"}
-            pending = [n for n in extra_cards.NOVEDADES
-                       if n["id"] not in announced and _vt(n["desde"]) <= _vt(live)]
+            pending = []
+            for n in extra_cards.NOVEDADES:
+                if _vt(n["desde"]) > _vt(live):
+                    continue
+                if n["id"] not in announced:
+                    pending.append((n["id"], False))
+                elif extra_cards.NOVEDAD_SHOTS.get(n["id"], {}).get("republicar") and f"{n['id']}:visual" not in announced:
+                    pending.append((n["id"], True))
             if pending:
-                add("post", "novedad", "12:00", {"id": pending[0]["id"]}, pending[0]["id"])
+                nid, repost = pending[0]
+                add("post", "novedad", "12:00", {"id": nid, "repost": repost}, f"{nid}:visual" if repost else nid)
 
     n_stories = random.choices([1, 2], weights=[35, 65])[0]
     slots = STORY_SLOTS if n_stories == 2 else [random.choice(STORY_SLOTS)]

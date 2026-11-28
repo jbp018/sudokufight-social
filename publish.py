@@ -41,15 +41,8 @@ else:
 
 
 def get_token() -> str:
-    token = os.environ.get("IG_ACCESS_TOKEN", "")
-    env_file = DIR / ".env"
-    if not token and env_file.exists():
-        for line in env_file.read_text(encoding="utf-8").splitlines():
-            if line.startswith("IG_ACCESS_TOKEN="):
-                token = line.split("=", 1)[1].strip()
-    if not token:
-        sys.exit("Falta IG_ACCESS_TOKEN (variable de entorno o .env)")
-    return token
+    import token_store
+    return token_store.current_token()
 
 
 def to_jpeg(png: Path, name: str | None = None) -> Path:
@@ -81,7 +74,8 @@ def save_state(message: str) -> None:
     la nube; en local no hace nada."""
     if not REPO:
         return
-    git("add", "history.json", "public")
+    paths = ["history.json", "public"] + (["token.enc"] if (HOST_REPO / "token.enc").exists() else [])
+    git("add", *paths)
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HOST_REPO).returncode != 0:
         git("commit", "-m", message, "--quiet")
         git_push()

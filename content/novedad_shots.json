@@ -1,14 +1,44 @@
 {
  "rivals": {
-  "shots": [["rivales_lista.png", "screen"], ["rival_cara_a_cara.png", "screen"], ["rival_batallas.png", "screen"]],
-  "donde": "Estadísticas → Rivales → toca a un rival"
+  "shots": [
+   [
+    "rivales_lista.png",
+    "screen"
+   ],
+   [
+    "rival_cara_a_cara.png",
+    "screen"
+   ],
+   [
+    "rival_batallas.png",
+    "screen"
+   ]
+  ],
+  "donde": "Estadísticas → Rivales → toca a un rival",
+  "republicar": true
  },
  "records": {
-  "shots": [["estadisticas_resumen.png", "screen"]],
-  "donde": "Estadísticas → Resumen → Tus récords"
+  "shots": [
+   [
+    "estadisticas_resumen.png",
+    "screen"
+   ]
+  ],
+  "donde": "Estadísticas → Resumen → Tus récords",
+  "republicar": true
  },
  "shareDaily": {
-  "shots": [["reto_clasificacion.png", "screen"], ["compartir_tarjeta.png", "card"]],
-  "donde": "Completa el reto → Ver clasificación → Compartir"
+  "shots": [
+   [
+    "reto_clasificacion.png",
+    "screen"
+   ],
+   [
+    "compartir_tarjeta.png",
+    "card"
+   ]
+  ],
+  "donde": "Completa el reto → Ver clasificación → Compartir",
+  "republicar": true
  }
 }

@@ -22,6 +22,7 @@ from pathlib import Path
 import extra_cards
 import ranking_cards
 import theme as T
+import token_store
 from content_plan import get_plan, mark_done
 from theme import MESES, fecha_es, fetch_rankings, hoy
 
@@ -92,7 +93,8 @@ def caption_for(piece: dict, data: dict | None, today: date) -> str:
 
     if ctype == "novedad":
         item = next(x for x in extra_cards.NOVEDADES if x["id"] == a["id"])
-        return (f"🆕 {item['title']}\n\n{item['body']}\n\nActualiza Sudoku Fight a la última versión. "
+        lead = "📱 Por si se te pasó:" if a.get("repost") else "🆕"
+        return (f"{lead} {item['title']}\n\n{item['body']}\n\nActualiza Sudoku Fight a la última versión. "
                 f"{DOWNLOAD}\n\n{HASHTAGS}")
 
     if ctype in ("champion_month", "champion_year"):
@@ -155,9 +157,15 @@ def main():
     print(f"{today} {now_hhmm}: {len(plan)} piezas en el plan, {len(due)} pendientes de publicar ahora")
 
     T.OUTPUT.mkdir(exist_ok=True)
+    failures = 0
     if not args.dry_run:
         cleanup_old_images(today)
-    failures = 0
+        if not args.sample:
+            try:
+                token_store.maybe_refresh(today)
+            except RuntimeError as e:  # el token aún vale: se sigue publicando, pero la ejecución falla a la vista
+                print(f"ERROR: {e}")
+                failures += 1
     for piece in due:
         label = f"{piece['time']} {piece['slot']} {piece['type']} {piece.get('ref') or ''}".strip()
         try:

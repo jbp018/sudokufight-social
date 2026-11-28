@@ -46,6 +46,7 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          TOKEN_KEY: ${{ secrets.TOKEN_KEY }}
           PYTHONIOENCODING: utf-8
         run: |
           case "${{ inputs.modo }}" in
@@ -57,5 +58,5 @@ jobs:
         if: always()
         shell: bash
         run: |
-          git add history.json public
+          git add history.json public token.enc
           git diff --cached --quiet || (git commit -m "estado $(date -u +%F)" && git pull --rebase --quiet && git push)
